@@ -18,12 +18,12 @@ var quotes =
 		image: document.getElementById("background-img").src = "img/bruceLee.jpg"
 	},
 	{
-		quote: 'Life is what happens when you\'re busy making other plans.',
+		quote: `Life is what happens when you're busy making other plans.`,
 		source: 'John Lennon',
 		image: document.getElementById("background-img").src = "img/johnLennon.jpg"
 	},
 	{
-		quote:'In the end, it\'s not the years in your life, but the life in your years.' ,
+		quote:`In the end, it's not the years in your life, but the life in your years.` ,
 		source: 'Abraham Lincoln',
 		image: document.getElementById("background-img").src = "img/abeLincoln.jpg"
 	},
@@ -39,7 +39,7 @@ var quotes =
 		image: document.getElementById("background-img").src = "img/drSeuss.jpg"
 	},
 	{
-		quote:'Whether you think you can, or you think you can\'t -- you\'re right.' ,
+		quote:`Whether you think you can, or you think you can't -- you're right.` ,
 		source: 'Henry Ford',
 		image: document.getElementById("background-img").src = "img/henryFord.jpg"
 	},
@@ -71,13 +71,13 @@ function printQuote ()
 {
 	var randomQuote = getRandomQuote(quotes);
 	document.getElementById("background-img").src = randomQuote.image;
-	printQuote = '<p class="quote">' + randomQuote.quote + '</p>';
-	printQuote += '<p class="source">' + randomQuote.source;
+	printQuote = `<p class="quote">${randomQuote.quote}</p>`;
+	printQuote += `<p class="source">${randomQuote.source}`;
 	if (randomQuote.citation != undefined)
 	{
-  		printQuote += '<span class="citation"> ' + randomQuote.citation + '</span>';
+  		printQuote += `<span class="citation"> ${randomQuote.citation} </span>`;
   		if(randomQuote.year != undefined)
-  			printQuote += '<span class="year"> ' + randomQuote.year + '</span>';
+  			printQuote += `<span class="year"> ${randomQuote.year} </span>`;
   	}
 	printQuote += '</p>';
 	document.getElementById('quote-box').innerHTML = printQuote;
